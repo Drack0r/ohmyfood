@@ -1,0 +1,9 @@
+@use "../utils/variables" as *;
+
+html {
+  font-family: $font-stack-primary;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1;
+  color: $black;
+}

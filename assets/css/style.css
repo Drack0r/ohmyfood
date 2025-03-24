@@ -5,43 +5,6 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  font-family: sans-serif;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 menu,
 ol,
 ul {
@@ -51,6 +14,91 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+body {
+  background: #d2d2d2;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1;
+  color: #101010;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  padding-top: 14px;
+  padding-bottom: 13px;
+  z-index: 1;
+}
+.header__logo {
+  font-family: "Shrikhand", serif;
+  font-size: 1.765rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  padding: 0 18px;
+}
+.header__location {
+  width: 100%;
+  background: #eaeaea;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 15.5px 0;
+  z-index: 0;
+}
+.header__location button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 27.6%;
+}
+.header__location button img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__location input {
+  border: none;
+  background: none;
+  width: 32.06%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #353535;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 0;
+}
+.header__location input::placeholder {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #353535;
+}
+.header__location input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.header__location input:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */

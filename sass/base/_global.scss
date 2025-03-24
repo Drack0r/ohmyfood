@@ -1,0 +1,12 @@
+@use "../utils/variables" as *;
+
+body {
+  background: $bg-color;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background: $white;
+}

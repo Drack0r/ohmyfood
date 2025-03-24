@@ -10,11 +10,35 @@
     />
     <link rel="icon" href="/assets/img/icons/favicon.png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div class="main-container">
-      <header class="header"></header>
+      <header class="header">
+        <div class="header-top">
+          <a href="index.html" class="header__logo">ohmyfood</a>
+        </div>
+
+        <form class="header__location">
+          <button>
+            <img
+              src="assets/img/icons/location.png"
+              alt="Localisation"
+              height="16"
+              width="12"
+            />
+          </button>
+
+          <input type="search" placeholder="Paris, Belleville" />
+        </form>
+      </header>
 
       <section class="hero"></section>
 

@@ -1,0 +1,77 @@
+@use "../utils/variables" as *;
+
+.header {
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow-1;
+    padding-top: 14px;
+    padding-bottom: 13px;
+    z-index: 1;
+  }
+
+  &__logo {
+    font-family: $font-stack-secondary;
+    font-size: 1.765rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.2;
+    padding: 0 18px;
+  }
+
+  &__location {
+    width: 100%;
+    background: $bg-gray;
+    box-shadow: $shadow-2;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 15.5px 0;
+    z-index: 0;
+
+    & button {
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 27.6%;
+
+      & img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    & input {
+      border: none;
+      background: none;
+      width: 32.06%;
+      font-size: 16px;
+      font-weight: 600;
+      color: #353535;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 0;
+
+      &::placeholder {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 600;
+        color: #353535;
+      }
+
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
