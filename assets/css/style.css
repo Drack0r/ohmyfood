@@ -145,4 +145,72 @@ html {
   margin-top: 27px;
 }
 
+.functioning {
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 68px;
+}
+.functioning__title {
+  align-self: flex-start;
+  font-size: 1.411rem;
+  margin-left: 5.33%;
+  color: #000;
+}
+.functioning__cards-container {
+  margin-top: 26px;
+  width: 89.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 25px;
+}
+.functioning__card {
+  position: relative;
+  height: 72.38px;
+  width: 96.26%;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding-left: 33.47px;
+  gap: 27px;
+}
+.functioning__card i {
+  color: #7e7e7e;
+}
+.functioning__card span {
+  font-weight: 500;
+  font-size: 0.941rem;
+  font-family: "Roboto", sans-serif;
+}
+.functioning__card::before {
+  position: absolute;
+  left: -12px;
+  content: "";
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: #9356dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.823rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+.functioning__card--1::before {
+  content: "1";
+}
+.functioning__card--2::before {
+  content: "2";
+}
+.functioning__card--3::before {
+  content: "3";
+}
+
 /*# sourceMappingURL=style.css.map */
