@@ -1,3 +1,4 @@
+/* Functioning */
 @use "../utils/variables" as *;
 
 .functioning {
@@ -29,6 +30,7 @@
     width: 96.26%;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     background: $bg-light-gray;
