@@ -1,14 +1,17 @@
+/* Header */
+
 @use "../utils/variables" as *;
 
 .header {
-  &-top {
+  &__top {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: $shadow-1;
     padding-top: 14px;
     padding-bottom: 13px;
-    z-index: 1;
+    z-index: 2;
   }
 
   &__logo {
@@ -21,37 +24,37 @@
   }
 
   &__location {
+    position: relative;
     width: 100%;
-    background: $bg-gray;
-    box-shadow: $shadow-2;
     display: flex;
     align-items: center;
-    gap: 32px;
+    justify-content: center;
+    gap: 17px;
     padding: 15.5px 0;
-    z-index: 0;
+    background: $bg-gray;
+    box-shadow: $shadow-2;
+    z-index: 1;
 
     & button {
       background: none;
       border: none;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-left: 27.6%;
 
-      & img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      & i {
+        color: $black-2;
       }
     }
 
     & input {
       border: none;
       background: none;
-      width: 32.06%;
+      width: 109px;
       font-size: 16px;
-      font-weight: 600;
-      color: #353535;
+      font-weight: 500;
+      color: $black-2;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -60,8 +63,8 @@
       &::placeholder {
         width: 100%;
         font-size: 16px;
-        font-weight: 600;
-        color: #353535;
+        font-weight: 500;
+        color: $black-2;
       }
 
       &::-webkit-search-cancel-button {

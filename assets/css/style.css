@@ -16,6 +16,7 @@ a {
   text-decoration: none;
 }
 
+/* Global */
 body {
   background: #d2d2d2;
 }
@@ -27,6 +28,7 @@ body {
   background: #ffffff;
 }
 
+/* Typography */
 html {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
@@ -35,14 +37,16 @@ html {
   color: #101010;
 }
 
-.header-top {
+/* Header */
+.header__top {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   padding-top: 14px;
   padding-bottom: 13px;
-  z-index: 1;
+  z-index: 2;
 }
 .header__logo {
   font-family: "Shrikhand", serif;
@@ -53,34 +57,34 @@ html {
   padding: 0 18px;
 }
 .header__location {
+  position: relative;
   width: 100%;
-  background: #eaeaea;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
-  gap: 32px;
+  justify-content: center;
+  gap: 17px;
   padding: 15.5px 0;
-  z-index: 0;
+  background: #eaeaea;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 .header__location button {
   background: none;
   border: none;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 27.6%;
 }
-.header__location button img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.header__location button i {
+  color: #353535;
 }
 .header__location input {
   border: none;
   background: none;
-  width: 32.06%;
+  width: 109px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: #353535;
   display: flex;
   align-items: center;
@@ -90,7 +94,7 @@ html {
 .header__location input::placeholder {
   width: 100%;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   color: #353535;
 }
 .header__location input::-webkit-search-cancel-button {
