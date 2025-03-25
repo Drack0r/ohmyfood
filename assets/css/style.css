@@ -105,4 +105,44 @@ html {
   outline: none;
 }
 
+/* Hero */
+.hero {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 39px;
+  padding-bottom: 57px;
+}
+.hero__title {
+  width: 73.33%;
+  font-size: 1.411rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000;
+  text-align: center;
+}
+.hero__description {
+  width: 84%;
+  font-weight: 300;
+  font-size: 1.058rem;
+  line-height: 1.25;
+  color: #353535;
+  text-align: center;
+  margin-top: 17px;
+}
+.hero__btn {
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  padding: 14px 21px;
+  font-weight: 500;
+  font-size: 0.941rem;
+  line-height: 1.45;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  margin-top: 27px;
+}
+
 /*# sourceMappingURL=style.css.map */

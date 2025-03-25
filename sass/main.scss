@@ -1,6 +1,7 @@
-@forward "./base/reset";
-@forward "./utils/variables";
-@forward "./base/global";
-@forward "./base/typography";
+@use "./base/reset";
+@use "./utils/variables";
+@use "./base/global";
+@use "./base/typography";
 
-@forward "./layout/header";
+@use "./layout/header";
+@use "./layout/hero";
