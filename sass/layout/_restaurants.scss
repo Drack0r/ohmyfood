@@ -107,5 +107,11 @@
         object-fit: contain;
       }
     }
+
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: $shadow-2;
+      transition: all 0.3s ease-in-out;
+    }
   }
 }

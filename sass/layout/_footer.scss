@@ -1,0 +1,55 @@
+/* Footer */
+@use "../utils/variables" as *;
+
+.footer {
+  background: $black-4;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-bottom: 22px;
+
+  &__logo {
+    font-family: $font-stack-secondary;
+    font-weight: 400;
+    font-size: 1.058rem;
+    color: $white;
+    font-style: italic;
+  }
+
+  &__nav {
+    margin-top: 20px;
+    position: relative;
+    left: 3px;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    &-link {
+      display: flex;
+      gap: 11px;
+
+      &:hover {
+        text-decoration: underline $white;
+      }
+    }
+
+    & i {
+      width: 11px;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & span {
+      color: $white;
+      font-weight: 500;
+      font-size: 0.941rem;
+      line-height: 1.5;
+    }
+  }
+}
