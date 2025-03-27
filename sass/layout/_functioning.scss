@@ -3,6 +3,7 @@ Functioning
 ==========================*/
 
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .functioning {
   padding-top: 48px;
@@ -16,7 +17,7 @@ Functioning
   align-self: flex-start;
   font-size: 1.411rem;
   margin-left: 5.33%;
-  color: $black-3;
+  color: $black;
 }
 
 .functioning__cards-container {
@@ -38,7 +39,7 @@ Functioning
   display: flex;
   align-items: center;
   background: $bg-light-gray;
-  box-shadow: $shadow-4;
+  @include box-shadow($shadow-functioning-card);
   padding-left: 33.47px;
   gap: 27px;
 

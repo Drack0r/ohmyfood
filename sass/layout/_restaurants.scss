@@ -3,6 +3,7 @@ Restaurants
 ==========================*/
 
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .restaurants {
   padding-top: 54px;
@@ -20,7 +21,7 @@ Restaurants
   font-size: 1.411rem;
   font-weight: 700;
   line-height: 1.1;
-  color: $black-3;
+  color: $black;
 }
 
 .restaurants__cards-container {
@@ -44,7 +45,7 @@ Restaurants
   flex-direction: column;
   background: $white;
   border-radius: 15px;
-  box-shadow: $shadow-5;
+  @include box-shadow($shadow-restaurants-card);
   overflow: hidden;
 
   & img {
@@ -56,7 +57,7 @@ Restaurants
 
   &:hover {
     transform: scale(1.03);
-    box-shadow: $shadow-2;
+    @include box-shadow($shadow-restaurants-card--hover);
     transition: all 0.3s ease-in-out;
   }
 
@@ -92,7 +93,7 @@ Restaurants
   font-size: 1.058rem;
   font-weight: 700;
   line-height: 1.25;
-  color: $black-3;
+  color: $black;
 }
 
 .restaurants__card-location {
@@ -100,7 +101,7 @@ Restaurants
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.25;
-  color: $black-3;
+  color: $black;
 }
 
 .restaurants__card-like {

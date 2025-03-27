@@ -133,7 +133,7 @@ Hero
   font-size: 1.411rem;
   font-weight: 700;
   line-height: 1.1;
-  color: #000;
+  color: #000000;
 }
 
 .hero__description {
@@ -174,7 +174,7 @@ Functioning
   align-self: flex-start;
   font-size: 1.411rem;
   margin-left: 5.33%;
-  color: #000;
+  color: #000000;
 }
 
 .functioning__cards-container {
@@ -253,7 +253,7 @@ Restaurants
   font-size: 1.411rem;
   font-weight: 700;
   line-height: 1.1;
-  color: #000;
+  color: #000000;
 }
 
 .restaurants__cards-container {
@@ -287,7 +287,7 @@ Restaurants
 }
 .restaurants__card:hover {
   transform: scale(1.03);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease-in-out;
 }
 .restaurants__card--1::before, .restaurants__card--2::before {
@@ -320,7 +320,7 @@ Restaurants
   font-size: 1.058rem;
   font-weight: 700;
   line-height: 1.25;
-  color: #000;
+  color: #000000;
 }
 
 .restaurants__card-location {
@@ -328,7 +328,7 @@ Restaurants
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.25;
-  color: #000;
+  color: #000000;
 }
 
 .restaurants__card-like {

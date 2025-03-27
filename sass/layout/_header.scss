@@ -3,6 +3,7 @@ Header
 ==========================*/
 
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .header__top {
   position: relative;
@@ -11,7 +12,7 @@ Header
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: $shadow-1;
+  @include box-shadow($shadow-logo);
   z-index: 2;
 }
 
@@ -33,7 +34,7 @@ Header
   justify-content: center;
   gap: 17px;
   background: $bg-gray;
-  box-shadow: $shadow-2;
+  @include box-shadow($shadow-location);
   z-index: 1;
 
   & button {
@@ -45,7 +46,7 @@ Header
     justify-content: center;
 
     & i {
-      color: $black-2;
+      color: $black-light;
     }
   }
 
@@ -56,7 +57,7 @@ Header
     padding: 2px 0;
     font-size: 16px;
     font-weight: 500;
-    color: $black-2;
+    color: $black-light;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +66,7 @@ Header
       width: 100%;
       font-size: 16px;
       font-weight: 500;
-      color: $black-2;
+      color: $black-light;
     }
 
     &::-webkit-search-cancel-button {

@@ -1,0 +1,7 @@
+@use "./variables" as *;
+
+// Shadow
+@mixin box-shadow($shadow) {
+  box-shadow: map-get($shadow, x) map-get($shadow, y) map-get($shadow, blur)
+    map-get($shadow, color);
+}
