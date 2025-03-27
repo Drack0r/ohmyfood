@@ -44,9 +44,11 @@ Restaurants
   display: flex;
   flex-direction: column;
   background: $white;
+  background-size: 200% 200%;
   border-radius: 15px;
   @include box-shadow($shadow-restaurants-card);
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 
   & img {
     object-fit: cover;
@@ -58,7 +60,6 @@ Restaurants
   &:hover {
     transform: scale(1.03);
     @include box-shadow($shadow-restaurants-card--hover);
-    transition: all 0.3s ease-in-out;
   }
 
   &--1::before,

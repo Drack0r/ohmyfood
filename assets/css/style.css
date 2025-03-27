@@ -151,10 +151,10 @@ Hero
   margin-top: 27px;
   padding: 14px 21px;
   font-size: 0.941rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.45;
   color: #ffffff;
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   background-size: 200% 200%;
   border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -282,9 +282,11 @@ Restaurants
   display: flex;
   flex-direction: column;
   background: #ffffff;
+  background-size: 200% 200%;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 .restaurants__card img {
   object-fit: cover;
@@ -295,7 +297,6 @@ Restaurants
 .restaurants__card:hover {
   transform: scale(1.03);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease-in-out;
 }
 .restaurants__card--1::before, .restaurants__card--2::before {
   content: "Nouveau";
