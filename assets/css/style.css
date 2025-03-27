@@ -38,6 +38,10 @@ body {
   background: #ffffff;
 }
 
+.responsive-hr {
+  display: none;
+}
+
 /*==========================
 Typography
 ==========================*/
@@ -473,6 +477,17 @@ Footer
   flex-direction: column;
   background: #363636;
 }
+@media (min-width: 1440px) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 0;
+    padding-right: 85px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 80px;
+  }
+}
 
 .footer__logo {
   font-family: "Shrikhand", serif;
@@ -493,11 +508,23 @@ Footer
   flex-direction: column;
   gap: 7px;
 }
+@media (min-width: 1440px) {
+  .footer__nav-list {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 18px;
+  }
+}
 
 .footer__nav-link {
   position: relative;
   display: inline-flex;
   gap: 11px;
+}
+@media (min-width: 1440px) {
+  .footer__nav-link {
+    gap: 13px;
+  }
 }
 .footer__nav-link i {
   width: 11px;
@@ -512,17 +539,33 @@ Footer
   line-height: 1.5;
   color: #ffffff;
 }
+@media (min-width: 1440px) {
+  .footer__nav-link span {
+    position: relative;
+    top: 2px;
+  }
+}
 .footer__nav-link::after {
   content: "";
   position: absolute;
   bottom: -3px;
-  height: 1px;
+  height: 2px;
   width: 0;
   background: #ffffff;
   transition: all 0.3s ease;
 }
 .footer__nav-link:hover::after {
   width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .responsive-hr {
+    display: block;
+    height: 0;
+    width: 20px;
+    border: none;
+    background: transparent;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,6 +3,7 @@ Footer
 ==========================*/
 
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
 .footer {
   padding-top: 25px;
@@ -11,6 +12,16 @@ Footer
   display: flex;
   flex-direction: column;
   background: $black-light-2;
+
+  @include respond-to(desktop) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 0;
+    padding-right: 85px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 80px;
+  }
 }
 
 .footer__logo {
@@ -31,12 +42,22 @@ Footer
   display: flex;
   flex-direction: column;
   gap: 7px;
+
+  @include respond-to(desktop) {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 18px;
+  }
 }
 
 .footer__nav-link {
   position: relative;
   display: inline-flex;
   gap: 11px;
+
+  @include respond-to(desktop) {
+    gap: 13px;
+  }
 
   & i {
     width: 11px;
@@ -51,13 +72,18 @@ Footer
     font-weight: 500;
     line-height: 1.5;
     color: $white;
+
+    @include respond-to(desktop) {
+      position: relative;
+      top: 2px;
+    }
   }
 
   &::after {
     content: "";
     position: absolute;
     bottom: -3px;
-    height: 1px;
+    height: 2px;
     width: 0;
     background: $white;
     transition: all 0.3s ease;
@@ -65,5 +91,15 @@ Footer
 
   &:hover::after {
     width: 100%;
+  }
+}
+
+.responsive-hr {
+  @include respond-to(desktop) {
+    display: block;
+    height: 0;
+    width: 20px;
+    border: none;
+    background: transparent;
   }
 }
