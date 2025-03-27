@@ -4,6 +4,12 @@ Global
 
 @use "../utils/variables" as *;
 
+html,
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   background: $bg-color;
 }
