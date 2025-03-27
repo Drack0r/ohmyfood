@@ -1,55 +1,58 @@
-/* Footer */
+/*==========================
+Footer
+==========================*/
+
 @use "../utils/variables" as *;
 
 .footer {
-  background: $black-4;
-  display: flex;
-  flex-direction: column;
   padding-top: 25px;
   padding-left: 25px;
   padding-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  background: $black-4;
+}
 
-  &__logo {
-    font-family: $font-stack-secondary;
-    font-weight: 400;
-    font-size: 1.058rem;
+.footer__logo {
+  font-family: $font-stack-secondary;
+  font-style: italic;
+  font-size: 1.058rem;
+  font-weight: 400;
+  color: $white;
+}
+
+.footer__nav {
+  margin-top: 20px;
+  position: relative;
+  left: 3px;
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer__nav-link {
+  display: flex;
+  gap: 11px;
+
+  & i {
+    width: 11px;
     color: $white;
-    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  &__nav {
-    margin-top: 20px;
-    position: relative;
-    left: 3px;
+  & span {
+    font-size: 0.941rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $white;
+  }
 
-    &-list {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    &-link {
-      display: flex;
-      gap: 11px;
-
-      &:hover {
-        text-decoration: underline $white;
-      }
-    }
-
-    & i {
-      width: 11px;
-      color: $white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    & span {
-      color: $white;
-      font-weight: 500;
-      font-size: 0.941rem;
-      line-height: 1.5;
-    }
+  &:hover {
+    text-decoration: underline $white;
   }
 }

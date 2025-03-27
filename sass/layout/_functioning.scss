@@ -1,78 +1,81 @@
-/* Functioning */
+/*==========================
+Functioning
+==========================*/
+
 @use "../utils/variables" as *;
 
 .functioning {
   padding-top: 48px;
+  padding-bottom: 68px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 68px;
+}
 
-  &__title {
-    align-self: flex-start;
-    font-size: 1.411rem;
-    margin-left: 5.33%;
-    color: $black-3;
+.functioning__title {
+  align-self: flex-start;
+  font-size: 1.411rem;
+  margin-left: 5.33%;
+  color: $black-3;
+}
+
+.functioning__cards-container {
+  margin-top: 26px;
+  width: 89.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.functioning__card {
+  position: relative;
+  height: 72.38px;
+  width: 96.26%;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: $bg-light-gray;
+  box-shadow: $shadow-4;
+  padding-left: 33.47px;
+  gap: 27px;
+
+  & i {
+    color: #7e7e7e;
   }
 
-  &__cards-container {
-    margin-top: 26px;
-    width: 89.33%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 30px;
+  & span {
+    font-weight: 500;
+    font-size: 0.941rem;
+    font-family: $font-stack-primary;
   }
 
-  &__card {
-    position: relative;
-    height: 72.38px;
-    width: 96.26%;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+  &::before {
+    position: absolute;
+    left: -12px;
+    content: "";
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: $purple;
     display: flex;
     align-items: center;
-    background: $bg-light-gray;
-    box-shadow: $shadow-4;
-    padding-left: 33.47px;
-    gap: 27px;
+    justify-content: center;
+    font-family: $font-stack-primary;
+    font-size: 0.823rem;
+    font-weight: 500;
+    color: $white;
+  }
 
-    & i {
-      color: #7e7e7e;
-    }
-
-    & span {
-      font-weight: 500;
-      font-size: 0.941rem;
-      font-family: $font-stack-primary;
-    }
-
-    &::before {
-      position: absolute;
-      left: -12px;
-      content: "";
-      height: 24px;
-      width: 24px;
-      border-radius: 50%;
-      background: $purple;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: $font-stack-primary;
-      font-size: 0.823rem;
-      font-weight: 500;
-      color: $white;
-    }
-
-    &--1::before {
-      content: "1";
-    }
-    &--2::before {
-      content: "2";
-    }
-    &--3::before {
-      content: "3";
-    }
+  &--1::before {
+    content: "1";
+  }
+  &--2::before {
+    content: "2";
+  }
+  &--3::before {
+    content: "3";
   }
 }
