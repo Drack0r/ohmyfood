@@ -28,6 +28,10 @@ Header
   font-weight: 400;
   font-style: italic;
   line-height: 1.2;
+
+  @include respond-to(desktop) {
+    font-size: 2rem;
+  }
 }
 
 .header__location {
@@ -41,6 +45,10 @@ Header
   background: $bg-gray;
   @include box-shadow($shadow-location);
   z-index: 1;
+
+  // @include respond-to(desktop) {
+  //   box-shadow: none;
+  // }
 
   & button {
     background: none;

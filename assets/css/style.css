@@ -77,6 +77,11 @@ Header
   font-style: italic;
   line-height: 1.2;
 }
+@media (min-width: 1440px) {
+  .header__logo {
+    font-size: 2rem;
+  }
+}
 
 .header__location {
   position: relative;
@@ -138,6 +143,12 @@ Hero
   align-items: center;
   background: #f6f6f6;
 }
+@media (min-width: 1440px) {
+  .hero {
+    padding-top: 32px;
+    padding-bottom: 30px;
+  }
+}
 
 .hero__title {
   width: 73.33%;
@@ -146,6 +157,11 @@ Hero
   font-weight: 700;
   line-height: 1.1;
   color: #000000;
+}
+@media (min-width: 1440px) {
+  .hero__title {
+    font-size: 2.352rem;
+  }
 }
 
 .hero__description {
@@ -156,6 +172,11 @@ Hero
   font-weight: 300;
   line-height: 1.25;
   color: #353535;
+}
+@media (min-width: 1440px) {
+  .hero__description {
+    margin-top: 33px;
+  }
 }
 
 .hero__btn {
@@ -188,12 +209,23 @@ Functioning
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 1440px) {
+  .functioning {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
 
 .functioning__title {
   align-self: flex-start;
   font-size: 1.411rem;
   margin-left: 5.33%;
   color: #000000;
+}
+@media (min-width: 1440px) {
+  .functioning__title {
+    margin-left: 12.5%;
+  }
 }
 
 .functioning__cards-container {
@@ -203,6 +235,16 @@ Functioning
   flex-direction: column;
   align-items: flex-end;
   gap: 30px;
+}
+@media (min-width: 1440px) {
+  .functioning__cards-container {
+    position: relative;
+    right: 15px;
+    width: 73.1%;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
 }
 
 .functioning__card {
@@ -218,6 +260,13 @@ Functioning
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   padding-left: 33.47px;
   gap: 27px;
+}
+@media (min-width: 1440px) {
+  .functioning__card {
+    width: 31.84%;
+    gap: 18px;
+    padding-left: 38px;
+  }
 }
 .functioning__card i {
   color: #7e7e7e;

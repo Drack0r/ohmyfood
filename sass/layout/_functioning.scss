@@ -11,6 +11,11 @@ Functioning
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include respond-to(desktop) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .functioning__title {
@@ -18,6 +23,10 @@ Functioning
   font-size: 1.411rem;
   margin-left: 5.33%;
   color: $black;
+
+  @include respond-to(desktop) {
+    margin-left: 12.5%;
+  }
 }
 
 .functioning__cards-container {
@@ -27,6 +36,15 @@ Functioning
   flex-direction: column;
   align-items: flex-end;
   gap: 30px;
+
+  @include respond-to(desktop) {
+    position: relative;
+    right: 15px;
+    width: 73.1%;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
 }
 
 .functioning__card {
@@ -42,6 +60,12 @@ Functioning
   @include box-shadow($shadow-functioning-card);
   padding-left: 33.47px;
   gap: 27px;
+
+  @include respond-to(desktop) {
+    width: 31.84%;
+    gap: 18px;
+    padding-left: 38px;
+  }
 
   & i {
     color: #7e7e7e;
