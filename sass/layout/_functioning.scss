@@ -8,6 +8,7 @@ Functioning
 .functioning {
   padding-top: 48px;
   padding-bottom: 68px;
+  padding-left: 5.33%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,18 +16,15 @@ Functioning
   @include respond-to(desktop) {
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-left: 12.5%;
+    align-items: flex-start;
   }
 }
 
 .functioning__title {
   align-self: flex-start;
   font-size: 1.411rem;
-  margin-left: 5.33%;
   color: $black;
-
-  @include respond-to(desktop) {
-    margin-left: 12.5%;
-  }
 }
 
 .functioning__cards-container {
@@ -38,12 +36,10 @@ Functioning
   gap: 30px;
 
   @include respond-to(desktop) {
-    position: relative;
-    right: 15px;
-    width: 73.1%;
+    width: 83%;
     flex-direction: row;
     align-items: center;
-    gap: 24px;
+    gap: 26px;
   }
 }
 
@@ -62,7 +58,7 @@ Functioning
   gap: 27px;
 
   @include respond-to(desktop) {
-    width: 31.84%;
+    width: 31.81%;
     gap: 18px;
     padding-left: 38px;
   }

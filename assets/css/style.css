@@ -205,6 +205,7 @@ Functioning
 .functioning {
   padding-top: 48px;
   padding-bottom: 68px;
+  padding-left: 5.33%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -213,19 +214,15 @@ Functioning
   .functioning {
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-left: 12.5%;
+    align-items: flex-start;
   }
 }
 
 .functioning__title {
   align-self: flex-start;
   font-size: 1.411rem;
-  margin-left: 5.33%;
   color: #000000;
-}
-@media (min-width: 1440px) {
-  .functioning__title {
-    margin-left: 12.5%;
-  }
 }
 
 .functioning__cards-container {
@@ -238,12 +235,10 @@ Functioning
 }
 @media (min-width: 1440px) {
   .functioning__cards-container {
-    position: relative;
-    right: 15px;
-    width: 73.1%;
+    width: 83%;
     flex-direction: row;
     align-items: center;
-    gap: 24px;
+    gap: 26px;
   }
 }
 
@@ -263,7 +258,7 @@ Functioning
 }
 @media (min-width: 1440px) {
   .functioning__card {
-    width: 31.84%;
+    width: 31.81%;
     gap: 18px;
     padding-left: 38px;
   }
@@ -315,6 +310,14 @@ Restaurants
   align-items: center;
   background: #f6f6f6;
 }
+@media (min-width: 1440px) {
+  .restaurants {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+}
 
 .restaurants__title {
   align-self: flex-start;
@@ -332,8 +335,22 @@ Restaurants
   align-items: center;
   gap: 20px;
 }
+@media (min-width: 1440px) {
+  .restaurants__cards-container {
+    height: 550px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+}
 .restaurants__cards-container a {
   width: 100%;
+}
+@media (min-width: 1440px) {
+  .restaurants__cards-container a {
+    width: 45.37%;
+  }
 }
 
 .restaurants__card {
@@ -365,7 +382,7 @@ Restaurants
   top: 13px;
   right: 12px;
   height: 29px;
-  width: 23.52%;
+  width: 80px;
   font-size: 0.823rem;
   font-weight: 500;
   color: #008766;

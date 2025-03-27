@@ -14,6 +14,13 @@ Restaurants
   flex-direction: column;
   align-items: center;
   background: $bg-light-gray;
+
+  @include respond-to(desktop) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
 }
 
 .restaurants__title {
@@ -32,8 +39,20 @@ Restaurants
   align-items: center;
   gap: 20px;
 
+  @include respond-to(desktop) {
+    height: 550px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
   & a {
     width: 100%;
+
+    @include respond-to(desktop) {
+      width: 45.37%;
+    }
   }
 }
 
@@ -69,7 +88,7 @@ Restaurants
     top: 13px;
     right: 12px;
     height: 29px;
-    width: 23.52%;
+    width: 80px;
     font-size: 0.823rem;
     font-weight: 500;
     color: $green;
