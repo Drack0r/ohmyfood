@@ -417,7 +417,8 @@ Footer
 }
 
 .footer__nav-link {
-  display: flex;
+  position: relative;
+  display: inline-flex;
   gap: 11px;
 }
 .footer__nav-link i {
@@ -433,8 +434,17 @@ Footer
   line-height: 1.5;
   color: #ffffff;
 }
-.footer__nav-link:hover {
-  text-decoration: underline #ffffff;
+.footer__nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 1px;
+  width: 0;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+.footer__nav-link:hover::after {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
