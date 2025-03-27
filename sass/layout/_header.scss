@@ -14,6 +14,11 @@ Header
   justify-content: center;
   @include box-shadow($shadow-logo);
   z-index: 2;
+
+  @include respond-to(desktop) {
+    padding-top: 30px;
+    padding-bottom: 31px;
+  }
 }
 
 .header__logo {

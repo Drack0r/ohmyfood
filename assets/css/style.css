@@ -62,6 +62,12 @@ Header
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 2;
 }
+@media (min-width: 1440px) {
+  .header__top {
+    padding-top: 30px;
+    padding-bottom: 31px;
+  }
+}
 
 .header__logo {
   padding: 0 18px;
