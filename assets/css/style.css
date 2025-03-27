@@ -154,9 +154,16 @@ Hero
   font-weight: 500;
   line-height: 1.45;
   color: #ffffff;
-  background: linear-gradient(to top left, #9356dc, #ff79da);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background-size: 200% 200%;
   border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+.hero__btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  background-position: 100% 0;
 }
 
 /*==========================
