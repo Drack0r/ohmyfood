@@ -1,0 +1,162 @@
+/*==========================
+La palette du gout
+==========================*/
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+/*==========================
+Header
+==========================*/
+
+.header__action {
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  height: 30px;
+  width: 30px;
+  color: $black-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*==========================
+Page background
+==========================*/
+
+.page-background {
+  position: relative;
+  height: 275px;
+  width: 100%;
+  background: center / cover
+    url("../../assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  z-index: 1;
+}
+
+/*==========================
+Restaurant menu
+==========================*/
+
+.restaurant-menu {
+  position: relative;
+  top: -55px;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background: $bg-light-gray;
+  border-radius: 30px 30px 0 0;
+  z-index: 2;
+  margin-bottom: -55px;
+}
+
+.restaurant-menu__title {
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h1 {
+    font-family: $font-stack-secondary;
+    font-style: italic;
+    font-size: 1.647rem;
+    font-weight: 400;
+  }
+}
+
+.restaurant-menu__title .restaurants__card-action {
+  position: relative;
+  // top: -2px;
+  top: 0;
+  right: 3%;
+}
+
+.restaurant-menu__food-menu {
+  width: 92%;
+}
+
+.food-menu__title {
+  position: relative;
+  margin-bottom: 19px;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    display: block;
+    height: 3px;
+    width: 40px;
+    background: $light-green;
+  }
+}
+
+.food-menu__cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.food-menu__card {
+  height: 72px;
+  width: 100%;
+  padding: 14px 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  background: $white;
+  border-radius: 20px;
+  @include box-shadow($shadow-restaurants-card);
+}
+
+.food-menu__card-content {
+  width: 89%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  & h3 {
+    font-size: 1.058rem;
+    font-weight: 500;
+    color: $black;
+  }
+
+  & span {
+    font-size: 0.882rem;
+    font-weight: 300;
+    color: $black;
+  }
+}
+
+.food-menu__card-price {
+  align-self: end;
+  position: relative;
+  bottom: 1px;
+  height: 18px;
+
+  & span {
+    font-size: 0.882rem;
+    font-weight: 700;
+    color: $black-light;
+  }
+}
+
+.restaurant-menu .hero__btn {
+  width: 49.6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
