@@ -54,12 +54,6 @@ html {
 }
 
 /*==========================
-Buttons
-==========================*/
-/*==========================
-Cards
-==========================*/
-/*==========================
 Header
 ==========================*/
 .header__top {
@@ -106,9 +100,9 @@ Header
   z-index: 1;
 }
 .header__location button {
+  cursor: pointer;
   background: none;
   border: none;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,12 +115,12 @@ Header
   background: none;
   width: 109px;
   padding: 2px 0;
-  font-size: 16px;
-  font-weight: 500;
-  color: #353535;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #353535;
 }
 .header__location input::placeholder {
   width: 100%;
@@ -256,26 +250,26 @@ Functioning
 }
 
 .functioning__card {
+  cursor: pointer;
   position: relative;
   height: 72.38px;
   width: 96.26%;
+  padding-left: 33.47px;
   border: none;
   border-radius: 20px;
-  cursor: pointer;
   display: flex;
   align-items: center;
+  gap: 27px;
   background: #f6f6f6;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  padding-left: 33.47px;
-  gap: 27px;
 }
 .functioning__card i {
   color: #7e7e7e;
 }
 .functioning__card span {
-  font-weight: 500;
-  font-size: 0.941rem;
   font-family: "Roboto", sans-serif;
+  font-size: 0.941rem;
+  font-weight: 500;
 }
 .functioning__card::before {
   position: absolute;
@@ -283,21 +277,21 @@ Functioning
   content: "";
   height: 24px;
   width: 24px;
-  border-radius: 50%;
-  background: #9356dc;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
   font-family: "Roboto", sans-serif;
   font-size: 0.823rem;
   font-weight: 500;
   color: #ffffff;
+  background: #9356dc;
 }
 @media (min-width: 1440px) {
   .functioning__card {
     width: 31.81%;
-    gap: 18px;
     padding-left: 38px;
+    gap: 18px;
   }
 }
 .functioning__card--1::before {
@@ -372,9 +366,9 @@ Restaurants
   width: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
   background: #ffffff;
   background-size: 200% 200%;
-  border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.3s ease-in-out;
@@ -417,14 +411,14 @@ Restaurants
   right: 12px;
   height: 29px;
   width: 80px;
-  font-size: 0.823rem;
-  font-weight: 500;
-  color: #008766;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.823rem;
+  font-weight: 500;
+  color: #008766;
   background: #99e2d0;
-  border-radius: 4px;
 }
 
 .restaurants__card-action {
@@ -456,14 +450,14 @@ Restaurants
   opacity: 1;
 }
 .restaurants__card-action .heart-icon--filled {
+  height: 100%;
+  width: 100%;
   opacity: 0;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   background-size: 100%;
-  height: 100%;
-  width: 100%;
 }
 .restaurants__card-action input:checked ~ .heart-icon--empty {
   opacity: 0;
@@ -504,9 +498,9 @@ Footer
 }
 
 .footer__nav {
-  margin-top: 20px;
   position: relative;
   left: 3px;
+  margin-top: 20px;
 }
 
 .footer__nav-list {
@@ -534,10 +528,10 @@ Footer
 }
 .footer__nav-link i {
   width: 11px;
-  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #ffffff;
 }
 .footer__nav-link span {
   font-size: 0.941rem;
@@ -575,7 +569,7 @@ Footer
 }
 
 /*==========================
-La palette du gout
+La palette du gout - Page
 ==========================*/
 /*==========================
 Header
@@ -586,10 +580,10 @@ Header
   top: 17px;
   height: 30px;
   width: 30px;
-  color: #353535;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #353535;
 }
 
 /*==========================
@@ -610,16 +604,16 @@ Restaurant menu
   position: relative;
   top: -55px;
   width: 100%;
+  margin-bottom: -55px;
   padding-top: 32px;
   padding-bottom: 40px;
+  border-radius: 30px 30px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
   background: #f6f6f6;
-  border-radius: 30px 30px 0 0;
   z-index: 2;
-  margin-bottom: -55px;
 }
 
 .restaurant-menu__title {
@@ -676,13 +670,13 @@ Restaurant menu
   height: 72px;
   width: 100%;
   padding: 14px 15px;
+  border-radius: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 5px;
   background: #ffffff;
-  border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 

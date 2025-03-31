@@ -69,14 +69,14 @@ Restaurants
     right: 12px;
     height: 29px;
     width: 80px;
-    font-size: 0.823rem;
-    font-weight: 500;
-    color: $green;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.823rem;
+    font-weight: 500;
+    color: $green;
     background: $light-green;
-    border-radius: 4px;
   }
 }
 

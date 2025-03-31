@@ -33,9 +33,9 @@ Footer
 }
 
 .footer__nav {
-  margin-top: 20px;
   position: relative;
   left: 3px;
+  margin-top: 20px;
 }
 
 .footer__nav-list {
@@ -61,10 +61,10 @@ Footer
 
   & i {
     width: 11px;
-    color: $white;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: $white;
   }
 
   & span {

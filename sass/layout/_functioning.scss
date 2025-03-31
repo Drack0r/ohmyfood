@@ -31,7 +31,6 @@ Functioning
 
 .functioning__cards-container {
   margin-top: 26px;
-  // width: 89.33%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -53,8 +52,8 @@ Functioning
 
   @include respond-to(desktop) {
     width: 31.81%;
-    gap: 18px;
     padding-left: 38px;
+    gap: 18px;
   }
 
   &--1::before {

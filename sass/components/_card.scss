@@ -1,32 +1,32 @@
-/*==========================
-Cards
-==========================*/
+// =========================
+// Cards
+// =========================
 
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
 
 @mixin homepage-little-card {
+  cursor: pointer;
   position: relative;
   height: 72.38px;
   width: 96.26%;
+  padding-left: 33.47px;
   border: none;
   border-radius: 20px;
-  cursor: pointer;
   display: flex;
   align-items: center;
+  gap: 27px;
   background: $bg-light-gray;
   @include box-shadow($shadow-functioning-card);
-  padding-left: 33.47px;
-  gap: 27px;
 
   & i {
-    color: #7e7e7e;
+    color: $gray;
   }
 
   & span {
-    font-weight: 500;
-    font-size: 0.941rem;
     font-family: $font-stack-primary;
+    font-size: 0.941rem;
+    font-weight: 500;
   }
 
   &::before {
@@ -35,15 +35,15 @@ Cards
     content: "";
     height: 24px;
     width: 24px;
-    border-radius: 50%;
-    background: $purple;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
     font-family: $font-stack-primary;
     font-size: 0.823rem;
     font-weight: 500;
     color: $white;
+    background: $purple;
   }
 }
 
@@ -53,9 +53,9 @@ Cards
   width: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
   background: $white;
   background-size: 200% 200%;
-  border-radius: 15px;
   @include box-shadow($shadow-restaurants-card);
   overflow: hidden;
   transition: all 0.3s ease-in-out;

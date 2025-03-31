@@ -46,14 +46,10 @@ Header
   @include box-shadow($shadow-location);
   z-index: 1;
 
-  // @include respond-to(desktop) {
-  //   box-shadow: none;
-  // }
-
   & button {
+    cursor: pointer;
     background: none;
     border: none;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,12 +64,12 @@ Header
     background: none;
     width: 109px;
     padding: 2px 0;
-    font-size: 16px;
-    font-weight: 500;
-    color: $black-light;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: $black-light;
 
     &::placeholder {
       width: 100%;
