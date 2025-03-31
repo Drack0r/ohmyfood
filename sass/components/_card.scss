@@ -1,0 +1,98 @@
+/*==========================
+Cards
+==========================*/
+
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+
+@mixin homepage-little-card {
+  position: relative;
+  height: 72.38px;
+  width: 96.26%;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: $bg-light-gray;
+  @include box-shadow($shadow-functioning-card);
+  padding-left: 33.47px;
+  gap: 27px;
+
+  & i {
+    color: #7e7e7e;
+  }
+
+  & span {
+    font-weight: 500;
+    font-size: 0.941rem;
+    font-family: $font-stack-primary;
+  }
+
+  &::before {
+    position: absolute;
+    left: -12px;
+    content: "";
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: $purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-stack-primary;
+    font-size: 0.823rem;
+    font-weight: 500;
+    color: $white;
+  }
+}
+
+@mixin homepage-big-card {
+  position: relative;
+  height: 251px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  background-size: 200% 200%;
+  border-radius: 15px;
+  @include box-shadow($shadow-restaurants-card);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  & img {
+    object-fit: cover;
+    height: 69.32%;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    @include box-shadow($shadow-restaurants-card--hover);
+  }
+
+  &-description {
+    height: 30.68%;
+    padding-top: 16px;
+    padding-left: 13px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 15px 15px;
+  }
+
+  &-title {
+    font-size: 1.058rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: $black;
+  }
+
+  &-location {
+    margin-top: 3px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.25;
+    color: $black;
+  }
+}

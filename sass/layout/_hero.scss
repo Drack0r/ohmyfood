@@ -4,6 +4,7 @@ Hero
 
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
+@use "../components/button" as *;
 
 .hero {
   padding-top: 39px;
@@ -47,22 +48,6 @@ Hero
 }
 
 .hero__btn {
-  cursor: pointer;
+  @include button-primary;
   margin-top: 27px;
-  padding: 14px 21px;
-  font-size: 0.941rem;
-  font-weight: 400;
-  line-height: 1.45;
-  color: $white;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-  background-size: 200% 200%;
-  border-radius: 25px;
-  @include box-shadow($shadow-hero-btn);
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-    @include box-shadow($shadow-hero-btn--hover);
-    background-position: 100% 0;
-  }
 }

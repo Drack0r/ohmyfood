@@ -54,6 +54,12 @@ html {
 }
 
 /*==========================
+Buttons
+==========================*/
+/*==========================
+Cards
+==========================*/
+/*==========================
 Header
 ==========================*/
 .header__top {
@@ -185,17 +191,17 @@ Hero
 
 .hero__btn {
   cursor: pointer;
-  margin-top: 27px;
   padding: 14px 21px;
   font-size: 0.941rem;
   font-weight: 400;
   line-height: 1.45;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
   color: #ffffff;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   background-size: 200% 200%;
-  border-radius: 25px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease-in-out;
+  margin-top: 27px;
 }
 .hero__btn:hover {
   transform: scale(1.05);
@@ -263,13 +269,6 @@ Functioning
   padding-left: 33.47px;
   gap: 27px;
 }
-@media (min-width: 1440px) {
-  .functioning__card {
-    width: 31.81%;
-    gap: 18px;
-    padding-left: 38px;
-  }
-}
 .functioning__card i {
   color: #7e7e7e;
 }
@@ -293,6 +292,13 @@ Functioning
   font-size: 0.823rem;
   font-weight: 500;
   color: #ffffff;
+}
+@media (min-width: 1440px) {
+  .functioning__card {
+    width: 31.81%;
+    gap: 18px;
+    padding-left: 38px;
+  }
 }
 .functioning__card--1::before {
   content: "1";
@@ -383,6 +389,27 @@ Restaurants
   transform: scale(1.03);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
+.restaurants__card-description {
+  height: 30.68%;
+  padding-top: 16px;
+  padding-left: 13px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 15px 15px;
+}
+.restaurants__card-title {
+  font-size: 1.058rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #000000;
+}
+.restaurants__card-location {
+  margin-top: 3px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25;
+  color: #000000;
+}
 .restaurants__card--1::before, .restaurants__card--2::before {
   content: "Nouveau";
   position: absolute;
@@ -400,40 +427,16 @@ Restaurants
   border-radius: 4px;
 }
 
-.restaurants__card-description {
-  height: 30.68%;
-  padding-top: 16px;
-  padding-left: 13px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0 0 15px 15px;
-}
-
-.restaurants__card-title {
-  font-size: 1.058rem;
-  font-weight: 700;
-  line-height: 1.25;
-  color: #000000;
-}
-
-.restaurants__card-location {
-  margin-top: 3px;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.25;
-  color: #000000;
-}
-
 .restaurants__card-action {
   cursor: pointer;
   position: absolute;
-  bottom: 28px;
-  right: 25px;
   height: 27px;
   width: 29px;
   display: flex;
   align-items: center;
   justify-content: center;
+  bottom: 28px;
+  right: 25px;
 }
 .restaurants__card-action input {
   position: absolute;

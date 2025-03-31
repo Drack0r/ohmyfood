@@ -4,6 +4,8 @@ Restaurants
 
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
+@use "../components/button" as *;
+@use "../components/card" as *;
 
 .restaurants {
   padding-top: 54px;
@@ -57,29 +59,7 @@ Restaurants
 }
 
 .restaurants__card {
-  position: relative;
-  height: 251px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background: $white;
-  background-size: 200% 200%;
-  border-radius: 15px;
-  @include box-shadow($shadow-restaurants-card);
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-
-  & img {
-    object-fit: cover;
-    height: 69.32%;
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-  }
-
-  &:hover {
-    transform: scale(1.03);
-    @include box-shadow($shadow-restaurants-card--hover);
-  }
+  @include homepage-big-card;
 
   &--1::before,
   &--2::before {
@@ -100,78 +80,8 @@ Restaurants
   }
 }
 
-.restaurants__card-description {
-  height: 30.68%;
-  padding-top: 16px;
-  padding-left: 13px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0 0 15px 15px;
-}
-
-.restaurants__card-title {
-  font-size: 1.058rem;
-  font-weight: 700;
-  line-height: 1.25;
-  color: $black;
-}
-
-.restaurants__card-location {
-  margin-top: 3px;
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.25;
-  color: $black;
-}
-
 .restaurants__card-action {
-  cursor: pointer;
-  position: absolute;
+  @include button-clickable-primary;
   bottom: 28px;
   right: 25px;
-  height: 27px;
-  width: 29px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  & input {
-    position: absolute;
-    display: flex;
-    opacity: 0;
-    height: 0;
-    width: 0;
-  }
-
-  & .heart-icon {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-
-    &--empty {
-      opacity: 1;
-    }
-
-    &--filled {
-      opacity: 0;
-      background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      background-size: 100%;
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  & input:checked ~ .heart-icon {
-    &--empty {
-      opacity: 0;
-    }
-    &--filled {
-      opacity: 1;
-    }
-  }
 }

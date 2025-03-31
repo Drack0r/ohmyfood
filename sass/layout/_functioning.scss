@@ -4,6 +4,7 @@ Functioning
 
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
+@use "../components/card" as *;
 
 .functioning {
   padding-top: 48px;
@@ -48,50 +49,12 @@ Functioning
 }
 
 .functioning__card {
-  position: relative;
-  height: 72.38px;
-  width: 96.26%;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  background: $bg-light-gray;
-  @include box-shadow($shadow-functioning-card);
-  padding-left: 33.47px;
-  gap: 27px;
+  @include homepage-little-card;
 
   @include respond-to(desktop) {
     width: 31.81%;
     gap: 18px;
     padding-left: 38px;
-  }
-
-  & i {
-    color: #7e7e7e;
-  }
-
-  & span {
-    font-weight: 500;
-    font-size: 0.941rem;
-    font-family: $font-stack-primary;
-  }
-
-  &::before {
-    position: absolute;
-    left: -12px;
-    content: "";
-    height: 24px;
-    width: 24px;
-    border-radius: 50%;
-    background: $purple;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $font-stack-primary;
-    font-size: 0.823rem;
-    font-weight: 500;
-    color: $white;
   }
 
   &--1::before {
