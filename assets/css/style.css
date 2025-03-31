@@ -25,6 +25,7 @@ html,
 body {
   width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -444,7 +445,7 @@ Restaurants
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 .restaurants__card-action .heart-icon--empty {
   opacity: 1;
@@ -453,11 +454,27 @@ Restaurants
   height: 100%;
   width: 100%;
   opacity: 0;
+  position: relative;
+  overflow: hidden;
+}
+.restaurants__card-action .heart-icon--filled::before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  background-size: 100%;
+  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
 }
 .restaurants__card-action input:checked ~ .heart-icon--empty {
   opacity: 0;
@@ -535,7 +552,7 @@ Footer
 }
 .footer__nav-link span {
   font-size: 0.941rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
   color: #ffffff;
 }
@@ -552,7 +569,7 @@ Footer
   height: 2px;
   width: 0;
   background: #ffffff;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 .footer__nav-link:hover::after {
   width: 100%;

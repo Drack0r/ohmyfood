@@ -51,7 +51,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.8s ease;
 
     &--empty {
       opacity: 1;
@@ -61,11 +61,32 @@
       height: 100%;
       width: 100%;
       opacity: 0;
-      background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      background-size: 100%;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "\f004";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          193.33deg,
+          #9356dc -11.44%,
+          #ff79da 123.93%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1;
+      }
     }
   }
 
