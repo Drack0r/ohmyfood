@@ -5,6 +5,7 @@ La palette du gout - Page
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
 @use "../components/button" as *;
+@use "../utils/keyframes" as *;
 
 /*==========================
 Header
@@ -122,6 +123,16 @@ Restaurant menu
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+
+  animation: card-appear 0.8s ease forwards;
+  opacity: 0;
+  transform: translateX(-100%);
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
 }
 
 .food-menu__card input[type="checkbox"] {
