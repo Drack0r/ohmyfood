@@ -193,12 +193,13 @@ Hero
   border-radius: 25px;
   transition: all 0.3s ease-in-out;
   color: #ffffff;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: linear-gradient(175deg, #ef52d3, #7a5cff);
   background-size: 200% 200%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   margin-top: 27px;
 }
 .hero__btn:hover {
+  opacity: 0.8;
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   background-position: 100% 0;
@@ -445,7 +446,6 @@ Restaurants
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.8s ease;
 }
 .restaurants__card-action .heart-icon--empty {
   opacity: 1;
@@ -456,24 +456,28 @@ Restaurants
   opacity: 0;
   position: relative;
   overflow: hidden;
+  transition: all 0.8s ease;
 }
 .restaurants__card-action .heart-icon--filled::before {
   content: "\f004";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   position: absolute;
-  top: 0;
+  height: 100%;
+  width: 100%;
+  top: 0%;
   left: 0;
   right: 0;
   bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: linear-gradient(175deg, #ef52d3, #7a5cff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 0.35s ease-in-out;
   z-index: 1;
 }
 .restaurants__card-action input:checked ~ .heart-icon--empty {
@@ -481,6 +485,9 @@ Restaurants
 }
 .restaurants__card-action input:checked ~ .heart-icon--filled {
   opacity: 1;
+}
+.restaurants__card-action input:checked ~ .heart-icon--filled::before {
+  clip-path: inset(0 0 0 0);
 }
 
 /*==========================
