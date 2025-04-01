@@ -186,7 +186,7 @@ Hero
 
 .hero__btn {
   cursor: pointer;
-  padding: 14px 21px;
+  padding: 14px 23px;
   font-size: 0.941rem;
   font-weight: 400;
   line-height: 1.45;
@@ -289,6 +289,9 @@ Functioning
   color: #ffffff;
   background: #9356dc;
 }
+.functioning__card i.icon-specific {
+  color: #9356dc;
+}
 @media (min-width: 1440px) {
   .functioning__card {
     width: 31.81%;
@@ -342,7 +345,7 @@ Restaurants
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
 }
 @media (min-width: 1440px) {
   .restaurants__cards-container {
@@ -432,7 +435,7 @@ Restaurants
   align-items: center;
   justify-content: center;
   bottom: 28px;
-  right: 25px;
+  right: 28px;
 }
 .restaurants__card-action input {
   position: absolute;
@@ -666,8 +669,8 @@ Restaurant menu
 
 .food-menu__title {
   position: relative;
-  margin-bottom: 19px;
-  font-size: 1rem;
+  margin-bottom: 22px;
+  font-size: 0.941rem;
   font-weight: 300;
   text-transform: uppercase;
   color: #000000;
@@ -691,9 +694,9 @@ Restaurant menu
 }
 
 .food-menu__card {
-  height: 72px;
+  cursor: pointer;
   width: 100%;
-  padding: 14px 15px;
+  padding: 13px 15px;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
@@ -702,6 +705,16 @@ Restaurant menu
   gap: 5px;
   background: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.food-menu__card input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .food-menu__card-content {
@@ -709,16 +722,23 @@ Restaurant menu
   display: flex;
   flex-direction: column;
   gap: 7px;
+  transition: width 0.3s ease;
 }
 .food-menu__card-content h3 {
   font-size: 1.058rem;
   font-weight: 500;
   color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .food-menu__card-content span {
   font-size: 0.882rem;
   font-weight: 300;
   color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .food-menu__card-price {
@@ -726,6 +746,7 @@ Restaurant menu
   position: relative;
   bottom: 1px;
   height: 18px;
+  transition: transform 0.3s ease;
 }
 .food-menu__card-price span {
   font-size: 0.882rem;
@@ -733,12 +754,54 @@ Restaurant menu
   color: #353535;
 }
 
-.restaurant-menu .hero__btn {
-  width: 49.6%;
+.food-menu__card-check {
+  position: absolute;
+  right: -60px;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  background-color: #99e2d0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  transition: right 0.3s ease;
+}
+.food-menu__card-check i {
+  color: white;
+  font-size: 1.2rem;
+  transform: rotate(0);
+  transition: transform 0.5s ease;
+}
+
+.food-menu__card input[type=checkbox]:checked ~ .food-menu__card-content {
+  width: 65%;
+}
+
+.food-menu__card input[type=checkbox]:checked ~ .food-menu__card-price {
+  transform: translateX(-60px);
+}
+
+.food-menu__card input[type=checkbox]:checked ~ .food-menu__card-check {
+  right: 0;
+}
+
+.food-menu__card input[type=checkbox]:checked ~ .food-menu__card-check i {
+  transform: rotate(360deg);
+}
+
+.food-menu__card-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.restaurant-menu .hero__btn {
+  margin: 0;
+  padding: 14px 48px;
 }
 
 /*# sourceMappingURL=style.css.map */

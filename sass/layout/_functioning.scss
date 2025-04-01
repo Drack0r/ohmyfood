@@ -50,6 +50,10 @@ Functioning
 .functioning__card {
   @include homepage-little-card;
 
+  & i.icon-specific {
+    color: $purple;
+  }
+
   @include respond-to(desktop) {
     width: 31.81%;
     padding-left: 38px;
