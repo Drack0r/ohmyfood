@@ -613,8 +613,9 @@ Header
 ==========================*/
 .header__action {
   position: absolute;
-  left: 17px;
-  top: 17px;
+  left: 23px;
+  top: 50%;
+  transform: translateY(-50%);
   height: 30px;
   width: 30px;
   display: flex;
@@ -652,6 +653,15 @@ Restaurant menu
   background: #f6f6f6;
   z-index: 2;
 }
+@media (min-width: 1440px) {
+  .restaurant-menu {
+    width: 73.26%;
+    margin: 0 auto;
+    padding: 0 210px;
+    padding-top: 51px;
+    padding-bottom: 40px;
+  }
+}
 
 .restaurant-menu__title {
   position: relative;
@@ -659,6 +669,11 @@ Restaurant menu
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (min-width: 1440px) {
+  .restaurant-menu__title {
+    width: 310px;
+  }
 }
 .restaurant-menu__title h1 {
   font-family: "Shrikhand", serif;
@@ -671,6 +686,11 @@ Restaurant menu
   position: relative;
   top: 0;
   right: 3%;
+}
+@media (min-width: 1440px) {
+  .restaurant-menu__title .restaurants__card-action {
+    left: 0;
+  }
 }
 
 .restaurant-menu__food-menu {
@@ -706,7 +726,7 @@ Restaurant menu
 .food-menu__card {
   cursor: pointer;
   width: 100%;
-  padding: 13px 15px;
+  padding: 14px 15px;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
@@ -845,6 +865,16 @@ Restaurant menu
 .restaurant-menu .hero__btn {
   margin: 0;
   padding: 14px 48px;
+}
+
+.footer-restaurant {
+  position: relative;
+}
+@media (min-width: 1440px) {
+  .footer-restaurant {
+    margin-top: -55px;
+    z-index: 2;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
