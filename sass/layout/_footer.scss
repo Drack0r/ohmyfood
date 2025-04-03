@@ -6,18 +6,13 @@ Footer
 @use "../utils/mixins" as *;
 
 .footer {
-  padding-top: 25px;
-  padding-left: 25px;
-  padding-bottom: 22px;
+  padding: 25px 0 22px 25px;
   display: flex;
   flex-direction: column;
   background: $black-light-2;
 
   @include respond-to(desktop) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 0;
-    padding-right: 85px;
+    padding: 40px 85px 40px 0;
     flex-direction: row-reverse;
     align-items: flex-end;
     gap: 80px;

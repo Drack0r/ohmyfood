@@ -7,24 +7,23 @@ Header
 
 .header__top {
   position: relative;
-  padding-top: 14px;
-  padding-bottom: 13px;
+  padding: 14px 0;
   @include flex-center;
   @include box-shadow($shadow-logo);
   z-index: 2;
 
   @include respond-to(desktop) {
-    padding-top: 30px;
-    padding-bottom: 31px;
+    padding: 30px 0;
+    // box-shadow: none;
   }
 }
 
 .header__logo {
   padding: 0 18px;
   font-family: $font-stack-secondary;
+  font-style: italic;
   font-size: 1.765rem;
   font-weight: 400;
-  font-style: italic;
   line-height: 1.2;
 
   @include respond-to(desktop) {
@@ -42,10 +41,14 @@ Header
   @include box-shadow($shadow-location);
   z-index: 1;
 
+  @include respond-to(desktop) {
+    // box-shadow: none;
+  }
+
   & button {
     cursor: pointer;
-    background: none;
     border: none;
+    background: none;
     @include flex-center;
 
     & i {
@@ -59,13 +62,13 @@ Header
     width: 109px;
     padding: 2px 0;
     @include flex-center;
-    font-size: 16px;
+    font-size: 0.941rem;
     font-weight: 500;
     color: $black-light;
 
     &::placeholder {
       width: 100%;
-      font-size: 16px;
+      font-size: 0.941rem;
       font-weight: 500;
       color: $black-light;
     }

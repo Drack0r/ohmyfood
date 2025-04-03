@@ -7,18 +7,13 @@ Functioning
 @use "../components/card" as *;
 
 .functioning {
-  padding-top: 48px;
-  padding-bottom: 68px;
-  padding-left: 5.33%;
-  padding-right: 5.33%;
+  padding: 48px 5.33% 68px 5.33%;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include respond-to(desktop) {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 12.5%;
+    padding: 50px 0 50px 12.5%;
     align-items: flex-start;
   }
 }
@@ -55,7 +50,7 @@ Functioning
   }
 
   @include respond-to(desktop) {
-    width: 31.81%;
+    width: 30%;
     padding-left: 38px;
     gap: 18px;
   }

@@ -69,8 +69,7 @@ Header
 ==========================*/
 .header__top {
   position: relative;
-  padding-top: 14px;
-  padding-bottom: 13px;
+  padding: 14px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,17 +78,16 @@ Header
 }
 @media (min-width: 1440px) {
   .header__top {
-    padding-top: 30px;
-    padding-bottom: 31px;
+    padding: 30px 0;
   }
 }
 
 .header__logo {
   padding: 0 18px;
   font-family: "Shrikhand", serif;
+  font-style: italic;
   font-size: 1.765rem;
   font-weight: 400;
-  font-style: italic;
   line-height: 1.2;
 }
 @media (min-width: 1440px) {
@@ -112,8 +110,8 @@ Header
 }
 .header__location button {
   cursor: pointer;
-  background: none;
   border: none;
+  background: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,13 +127,13 @@ Header
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 0.941rem;
   font-weight: 500;
   color: #353535;
 }
 .header__location input::placeholder {
   width: 100%;
-  font-size: 16px;
+  font-size: 0.941rem;
   font-weight: 500;
   color: #353535;
 }
@@ -151,8 +149,7 @@ Header
 Hero
 ==========================*/
 .hero {
-  padding-top: 39px;
-  padding-bottom: 57px;
+  padding: 39px 0 57px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,8 +157,7 @@ Hero
 }
 @media (min-width: 1440px) {
   .hero {
-    padding-top: 32px;
-    padding-bottom: 30px;
+    padding: 32px 0 30px 0;
   }
 }
 
@@ -219,19 +215,14 @@ Hero
 Functioning
 ==========================*/
 .functioning {
-  padding-top: 48px;
-  padding-bottom: 68px;
-  padding-left: 5.33%;
-  padding-right: 5.33%;
+  padding: 48px 5.33% 68px 5.33%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (min-width: 1440px) {
   .functioning {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 12.5%;
+    padding: 50px 0 50px 12.5%;
     align-items: flex-start;
   }
 }
@@ -304,7 +295,7 @@ Functioning
 }
 @media (min-width: 1440px) {
   .functioning__card {
-    width: 31.81%;
+    width: 30%;
     padding-left: 38px;
     gap: 18px;
   }
@@ -323,10 +314,7 @@ Functioning
 Restaurants
 ==========================*/
 .restaurants {
-  padding-top: 54px;
-  padding-left: 5.33%;
-  padding-right: 5.33%;
-  padding-bottom: 66px;
+  padding: 54px 5.33% 66px 5.33%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -334,10 +322,7 @@ Restaurants
 }
 @media (min-width: 1440px) {
   .restaurants {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 12.5%;
-    padding-right: 12.5%;
+    padding: 30px 12.5% 30px 12.5%;
   }
 }
 
@@ -507,19 +492,14 @@ Restaurants
 Footer
 ==========================*/
 .footer {
-  padding-top: 25px;
-  padding-left: 25px;
-  padding-bottom: 22px;
+  padding: 25px 0 22px 25px;
   display: flex;
   flex-direction: column;
   background: #363636;
 }
 @media (min-width: 1440px) {
   .footer {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 0;
-    padding-right: 85px;
+    padding: 40px 85px 40px 0;
     flex-direction: row-reverse;
     align-items: flex-end;
     gap: 80px;
