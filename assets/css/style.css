@@ -190,7 +190,7 @@ Hero
   }
 }
 
-.hero__btn {
+.hero__btn, .restaurant__btn {
   cursor: pointer;
   padding: 14px 23px;
   font-size: 0.941rem;
@@ -204,7 +204,7 @@ Hero
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   margin-top: 27px;
 }
-.hero__btn:hover {
+.hero__btn:hover, .restaurant__btn:hover {
   opacity: 0.8;
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
@@ -421,7 +421,7 @@ Restaurants
   background: #99e2d0;
 }
 
-.restaurants__card-action {
+.restaurants__card-action, .restaurant__title .restaurant__like {
   cursor: pointer;
   position: absolute;
   height: 27px;
@@ -432,23 +432,23 @@ Restaurants
   bottom: 28px;
   right: 28px;
 }
-.restaurants__card-action input {
+.restaurants__card-action input, .restaurant__title .restaurant__like input {
   position: absolute;
   display: flex;
   opacity: 0;
   height: 0;
   width: 0;
 }
-.restaurants__card-action .heart-icon {
+.restaurants__card-action .heart-icon, .restaurant__title .restaurant__like .heart-icon {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.restaurants__card-action .heart-icon--empty {
+.restaurants__card-action .heart-icon--empty, .restaurant__title .restaurant__like .heart-icon--empty {
   opacity: 1;
 }
-.restaurants__card-action .heart-icon--filled {
+.restaurants__card-action .heart-icon--filled, .restaurant__title .restaurant__like .heart-icon--filled {
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -456,7 +456,7 @@ Restaurants
   overflow: hidden;
   transition: all 0.8s ease;
 }
-.restaurants__card-action .heart-icon--filled::before {
+.restaurants__card-action .heart-icon--filled::before, .restaurant__title .restaurant__like .heart-icon--filled::before {
   content: "\f004";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -478,13 +478,13 @@ Restaurants
   transition: clip-path 0.35s ease-in-out;
   z-index: 1;
 }
-.restaurants__card-action input:checked ~ .heart-icon--empty {
+.restaurants__card-action input:checked ~ .heart-icon--empty, .restaurant__title .restaurant__like input:checked ~ .heart-icon--empty {
   opacity: 0;
 }
-.restaurants__card-action input:checked ~ .heart-icon--filled {
+.restaurants__card-action input:checked ~ .heart-icon--filled, .restaurant__title .restaurant__like input:checked ~ .heart-icon--filled {
   opacity: 1;
 }
-.restaurants__card-action input:checked ~ .heart-icon--filled::before {
+.restaurants__card-action input:checked ~ .heart-icon--filled::before, .restaurant__title .restaurant__like input:checked ~ .heart-icon--filled::before {
   clip-path: inset(0 0 0 0);
 }
 
@@ -591,17 +591,17 @@ La palette du gout - Page
 /*==========================
 Header
 ==========================*/
-.header__action {
+.header__back-link {
   position: absolute;
-  left: 23px;
   top: 50%;
-  transform: translateY(-50%);
+  left: 23px;
   height: 30px;
   width: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #353535;
+  transform: translateY(-50%);
 }
 
 /*==========================
@@ -618,13 +618,12 @@ Page background
 /*==========================
 Restaurant menu
 ==========================*/
-.restaurant-menu {
+.restaurant {
   position: relative;
   top: -55px;
   width: 100%;
   margin-bottom: -55px;
-  padding-top: 32px;
-  padding-bottom: 40px;
+  padding: 32px 0 40px 0;
   border-radius: 30px 30px 0 0;
   display: flex;
   flex-direction: column;
@@ -634,16 +633,14 @@ Restaurant menu
   z-index: 2;
 }
 @media (min-width: 1440px) {
-  .restaurant-menu {
+  .restaurant {
     width: 73.26%;
     margin: 0 auto;
-    padding: 0 210px;
-    padding-top: 51px;
-    padding-bottom: 40px;
+    padding: 51px 210px 40px 210px;
   }
 }
 
-.restaurant-menu__title {
+.restaurant__title {
   position: relative;
   width: 90%;
   display: flex;
@@ -651,41 +648,40 @@ Restaurant menu
   justify-content: space-between;
 }
 @media (min-width: 1440px) {
-  .restaurant-menu__title {
+  .restaurant__title {
     width: 310px;
   }
 }
-.restaurant-menu__title h1 {
+.restaurant__title h1 {
   font-family: "Shrikhand", serif;
   font-style: italic;
   font-size: 1.647rem;
   font-weight: 400;
 }
-
-.restaurant-menu__title .restaurants__card-action {
+.restaurant__title .restaurant__like {
   position: relative;
   top: 0;
   right: 3%;
 }
 @media (min-width: 1440px) {
-  .restaurant-menu__title .restaurants__card-action {
+  .restaurant__title .restaurant__like {
     left: 0;
   }
 }
 
-.restaurant-menu__food-menu {
+.restaurant__container {
   width: 92%;
 }
 
-.food-menu__title {
+.restaurant__container-title {
   position: relative;
   margin-bottom: 22px;
+  text-transform: uppercase;
   font-size: 0.941rem;
   font-weight: 300;
-  text-transform: uppercase;
   color: #000000;
 }
-.food-menu__title::after {
+.restaurant__container-title::after {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -695,7 +691,7 @@ Restaurant menu
   background: #99e2d0;
 }
 
-.food-menu__cards-container {
+.restaurant__cards-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -703,8 +699,9 @@ Restaurant menu
   gap: 12px;
 }
 
-.food-menu__card {
+.restaurant__card {
   cursor: pointer;
+  position: relative;
   width: 100%;
   padding: 14px 15px;
   border-radius: 20px;
@@ -715,59 +712,69 @@ Restaurant menu
   gap: 5px;
   background: #ffffff;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
   animation: card-appear 0.8s ease forwards;
   opacity: 0;
   transform: translateX(-100%);
 }
-.food-menu__card:nth-child(1) {
+.restaurant__card:nth-child(1) {
   animation-delay: 0.1s;
 }
-.food-menu__card:nth-child(2) {
+.restaurant__card:nth-child(2) {
   animation-delay: 0.2s;
 }
-.food-menu__card:nth-child(3) {
+.restaurant__card:nth-child(3) {
   animation-delay: 0.3s;
 }
-.food-menu__card:nth-child(4) {
+.restaurant__card:nth-child(4) {
   animation-delay: 0.4s;
 }
-.food-menu__card:nth-child(5) {
+.restaurant__card:nth-child(5) {
   animation-delay: 0.5s;
 }
-.food-menu__card:nth-child(6) {
+.restaurant__card:nth-child(6) {
   animation-delay: 0.6s;
 }
-.food-menu__card:nth-child(7) {
+.restaurant__card:nth-child(7) {
   animation-delay: 0.7s;
 }
-.food-menu__card:nth-child(8) {
+.restaurant__card:nth-child(8) {
   animation-delay: 0.8s;
 }
-.food-menu__card:nth-child(9) {
+.restaurant__card:nth-child(9) {
   animation-delay: 0.9s;
 }
-.food-menu__card:nth-child(10) {
+.restaurant__card:nth-child(10) {
   animation-delay: 1s;
 }
-
-.food-menu__card input[type=checkbox] {
+.restaurant__card input[type=checkbox] {
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
+.restaurant__card input[type=checkbox]:checked ~ .restaurant__card-content {
+  width: 65%;
+}
+.restaurant__card input[type=checkbox]:checked ~ .restaurant__card-price {
+  transform: translateX(-60px);
+}
+.restaurant__card input[type=checkbox]:checked ~ .restaurant__card-check {
+  right: 0;
+}
+.restaurant__card input[type=checkbox]:checked ~ .restaurant__card-check i {
+  transform: rotate(360deg);
+}
 
-.food-menu__card-content {
+.restaurant__card-content {
   width: 89%;
   display: flex;
   flex-direction: column;
   gap: 7px;
   transition: width 0.3s ease;
 }
-.food-menu__card-content h3 {
+.restaurant__card-content h3 {
   font-size: 1.058rem;
   font-weight: 500;
   color: #000000;
@@ -775,7 +782,7 @@ Restaurant menu
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.food-menu__card-content span {
+.restaurant__card-content span {
   font-size: 0.882rem;
   font-weight: 300;
   color: #000000;
@@ -784,23 +791,23 @@ Restaurant menu
   text-overflow: ellipsis;
 }
 
-.food-menu__card-price {
-  align-self: end;
+.restaurant__card-price {
   position: relative;
+  align-self: end;
   bottom: 1px;
   height: 18px;
   transition: transform 0.3s ease;
 }
-.food-menu__card-price span {
+.restaurant__card-price span {
   font-size: 0.882rem;
   font-weight: 700;
   color: #353535;
 }
 
-.food-menu__card-check {
+.restaurant__card-check {
   position: absolute;
-  right: -60px;
   top: 0;
+  right: -60px;
   height: 100%;
   width: 60px;
   background-color: #99e2d0;
@@ -809,40 +816,24 @@ Restaurant menu
   align-items: center;
   transition: right 0.3s ease;
 }
-.food-menu__card-check i {
+.restaurant__card-check i {
   color: white;
   font-size: 1.2rem;
   transform: rotate(0);
   transition: transform 0.5s ease;
 }
 
-.food-menu__card input[type=checkbox]:checked ~ .food-menu__card-content {
-  width: 65%;
-}
-
-.food-menu__card input[type=checkbox]:checked ~ .food-menu__card-price {
-  transform: translateX(-60px);
-}
-
-.food-menu__card input[type=checkbox]:checked ~ .food-menu__card-check {
-  right: 0;
-}
-
-.food-menu__card input[type=checkbox]:checked ~ .food-menu__card-check i {
-  transform: rotate(360deg);
-}
-
-.food-menu__card-label {
+.restaurant__card-label {
+  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  cursor: pointer;
   z-index: 1;
 }
 
-.restaurant-menu .hero__btn {
+.restaurant__btn {
   margin: 0;
   padding: 14px 48px;
 }
