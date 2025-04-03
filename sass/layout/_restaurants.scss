@@ -42,13 +42,24 @@ Restaurants
     justify-content: space-between;
     align-content: space-between;
   }
+}
+
+.restaurants__card-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  @include homepage-big-card-hover;
+
+  @include respond-to(desktop) {
+    width: 45.37%;
+  }
 
   & a {
-    width: 100%;
-
-    @include respond-to(desktop) {
-      width: 45.37%;
-    }
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -74,6 +85,11 @@ Restaurants
 
 .restaurants__card-action {
   @include button-clickable-primary;
-  bottom: 28px;
-  right: 28px;
+
+  & {
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+    z-index: 1;
+  }
 }

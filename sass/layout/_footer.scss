@@ -87,11 +87,11 @@ Footer
   }
 }
 
-.responsive-hr {
+.responsive-br {
   @include respond-to(desktop) {
     display: block;
     height: 0;
-    width: 20px;
+    width: 0;
     border: none;
     background: transparent;
   }

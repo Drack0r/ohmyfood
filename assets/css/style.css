@@ -351,13 +351,27 @@ Restaurants
     align-content: space-between;
   }
 }
-.restaurants__cards-container a {
+
+.restaurants__card-wrapper {
+  position: relative;
   width: 100%;
+  border-radius: 15px;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.restaurants__card-wrapper:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 1440px) {
-  .restaurants__cards-container a {
+  .restaurants__card-wrapper {
     width: 45.37%;
   }
+}
+.restaurants__card-wrapper a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
 }
 
 .restaurants__card {
@@ -378,10 +392,6 @@ Restaurants
   height: 69.32%;
   width: 100%;
   border-radius: 15px 15px 0 0;
-}
-.restaurants__card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 .restaurants__card-description {
   height: 30.68%;
@@ -429,8 +439,6 @@ Restaurants
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 28px;
-  right: 28px;
 }
 .restaurants__card-action input, .restaurant__title .restaurant__like input {
   position: absolute;
@@ -486,6 +494,12 @@ Restaurants
 }
 .restaurants__card-action input:checked ~ .heart-icon--filled::before, .restaurant__title .restaurant__like input:checked ~ .heart-icon--filled::before {
   clip-path: inset(0 0 0 0);
+}
+.restaurants__card-action, .restaurant__title .restaurant__like {
+  position: absolute;
+  bottom: 30px;
+  right: 25px;
+  z-index: 1;
 }
 
 /*==========================
@@ -576,10 +590,10 @@ Footer
 }
 
 @media (min-width: 1440px) {
-  .responsive-hr {
+  .responsive-br {
     display: block;
     height: 0;
-    width: 20px;
+    width: 0;
     border: none;
     background: transparent;
   }

@@ -45,6 +45,13 @@
   }
 }
 
+@mixin homepage-big-card-hover {
+  &:hover {
+    transform: scale(1.03);
+    @include box-shadow($shadow-restaurants-card--hover);
+  }
+}
+
 @mixin homepage-big-card {
   position: relative;
   height: 251px;
@@ -63,11 +70,6 @@
     height: 69.32%;
     width: 100%;
     border-radius: 15px 15px 0 0;
-  }
-
-  &:hover {
-    transform: scale(1.03);
-    @include box-shadow($shadow-restaurants-card--hover);
   }
 
   &-description {
