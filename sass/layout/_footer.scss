@@ -61,9 +61,7 @@ Footer
 
   & i {
     width: 11px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     color: $white;
   }
 

@@ -3,17 +3,25 @@
 // =========================
 
 @use "./variables" as *;
+@use "sass:map";
+
+// Flexbox
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 // Shadow
 @mixin box-shadow($shadow) {
-  box-shadow: map-get($shadow, x) map-get($shadow, y) map-get($shadow, blur)
-    map-get($shadow, color);
+  box-shadow: map.get($shadow, "x") map.get($shadow, "y")
+    map.get($shadow, "blur") map.get($shadow, "color");
 }
 
 // Media queries
 @mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
       @content;
     }
   } @else {

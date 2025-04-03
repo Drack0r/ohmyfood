@@ -18,9 +18,7 @@ Header
   transform: translateY(-50%);
   height: 30px;
   width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   color: $black-light;
 }
 
@@ -206,9 +204,7 @@ Restaurant menu
   height: 100%;
   width: 60px;
   background-color: $light-green;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   transition: right 0.3s ease;
 
   & i {

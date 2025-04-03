@@ -36,9 +36,7 @@
   position: absolute;
   height: 27px;
   width: 29px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
 
   & input {
     position: absolute;
@@ -50,10 +48,7 @@
 
   & .heart-icon {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    // transition: all 0.8s ease;
+    @include flex-center;
 
     &--empty {
       opacity: 1;
@@ -78,9 +73,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center;
         background: $gradient-primary;
         -webkit-background-clip: text;
         background-clip: text;

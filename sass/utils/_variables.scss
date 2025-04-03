@@ -26,57 +26,57 @@ $gradient-primary: linear-gradient(175deg, #ef52d3, #7a5cff);
 
 // Shadow
 $shadow-logo: (
-  x: 0,
-  y: 2px,
-  blur: 4px,
-  color: rgba(0, 0, 0, 0.15),
+  "x": 0,
+  "y": 2px,
+  "blur": 4px,
+  "color": rgba(0, 0, 0, 0.15),
 );
 
 $shadow-location: (
-  x: 0,
-  y: 4px,
-  blur: 4px,
-  color: rgba(0, 0, 0, 0.25),
+  "x": 0,
+  "y": 4px,
+  "blur": 4px,
+  "color": rgba(0, 0, 0, 0.25),
 );
 
 $shadow-hero-btn: (
-  x: 0,
-  y: 4px,
-  blur: 10px,
-  color: rgba(0, 0, 0, 0.25),
+  "x": 0,
+  "y": 4px,
+  "blur": 10px,
+  "color": rgba(0, 0, 0, 0.25),
 );
 
 $shadow-functioning-card: (
-  x: 0,
-  y: 4px,
-  blur: 15px,
-  color: rgba(0, 0, 0, 0.15),
+  "x": 0,
+  "y": 4px,
+  "blur": 15px,
+  "color": rgba(0, 0, 0, 0.15),
 );
 
 $shadow-restaurants-card: (
-  x: 0,
-  y: 4px,
-  blur: 15px,
-  color: rgba(0, 0, 0, 0.1),
+  "x": 0,
+  "y": 4px,
+  "blur": 15px,
+  "color": rgba(0, 0, 0, 0.1),
 );
 
 $shadow-restaurants-card--hover: (
-  x: 0,
-  y: 4px,
-  blur: 15px,
-  color: rgba(0, 0, 0, 0.25),
+  "x": 0,
+  "y": 4px,
+  "blur": 15px,
+  "color": rgba(0, 0, 0, 0.25),
 );
 
 $shadow-hero-btn--hover: (
-  x: 0,
-  y: 8px,
-  blur: 16px,
-  color: rgba(0, 0, 0, 0.25),
+  "x": 0,
+  "y": 8px,
+  "blur": 16px,
+  "color": rgba(0, 0, 0, 0.25),
 );
 
 // Responsive
 $breakpoints: (
-  mobile: 375px,
-  tablet: 768px,
-  desktop: 1440px,
+  "mobile": 375px,
+  "tablet": 768px,
+  "desktop": 1440px,
 );

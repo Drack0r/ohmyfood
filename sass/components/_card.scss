@@ -35,9 +35,7 @@
     content: "";
     height: 24px;
     width: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     border-radius: 50%;
     font-family: $font-stack-primary;
     font-size: 0.823rem;
